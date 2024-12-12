@@ -1,5 +1,9 @@
+import Controller from './Controller/Controller.js';
+
 class App {
-  async run() {}
+  async run() {
+    await Controller.arrangeEmergencyWork();
+  }
 }
 
 export default App;
