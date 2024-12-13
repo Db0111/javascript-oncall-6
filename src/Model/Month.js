@@ -21,17 +21,17 @@ class Month {
 
       let holidayName = null;
       if (holiday) {
-        holidayName = holiday.name; // 법정 공휴일이 있으면 이름 할당
+        holidayName = holiday.name;
       }
 
       this.calendar[date] = {
         date: currentDay,
         isHoliday: isWeekend || !!holiday,
         holidayName,
-        isWeekend, // 주말 여부
+        isWeekend,
       };
 
-      currentDayIndex = (currentDayIndex + 1) % daysOfWeek.length; // 요일 순환
+      currentDayIndex = (currentDayIndex + 1) % daysOfWeek.length;
     }
     return this.calendar;
   }
