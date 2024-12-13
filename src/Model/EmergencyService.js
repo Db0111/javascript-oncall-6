@@ -1,19 +1,7 @@
-import splitInput from '../utils/splitInput.js';
-import InputValidator from '../utils/InputValidator.js';
-
 class EmergencyService {
   constructor() {
     this.weekDayIndex = 0;
     this.weekEndIndex = 0;
-  }
-
-  static createMonthData(userInput) {
-    const month = Number(splitInput(userInput)[0]);
-    const startDay = splitInput(userInput)[1];
-
-    InputValidator.isValid(month, startDay);
-
-    return { month, startDay };
   }
 
   arrangeSchedule(weekDayWorkerList, weekEndWorkerList, calendar) {
